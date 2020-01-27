@@ -1,0 +1,5 @@
+rootProject.name = 'spring-sandbox'
+
+include 'java'
+include 'kotlin'
+
