@@ -1,4 +1,4 @@
-package kkurczewski.deser.value.dto;
+package pl.kkurczewski.deser.value.dto;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 

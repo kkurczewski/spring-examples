@@ -1,4 +1,4 @@
-package kkurczewski.deser.greet.dto;
+package pl.kkurczewski.deser.greet.dto;
 
 import java.util.Objects;
 

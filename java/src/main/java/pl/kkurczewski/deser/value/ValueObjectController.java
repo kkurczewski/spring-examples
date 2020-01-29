@@ -1,6 +1,6 @@
-package kkurczewski.deser.value;
+package pl.kkurczewski.deser.value;
 
-import kkurczewski.deser.value.dto.Wrapper;
+import pl.kkurczewski.deser.value.dto.Wrapper;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;

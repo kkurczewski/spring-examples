@@ -1,4 +1,4 @@
-package kkurczewski.deser.user.dto;
+package pl.kkurczewski.deser.user.dto;
 
 import com.fasterxml.jackson.annotation.JsonUnwrapped;
 

@@ -1,11 +1,10 @@
-package kkurczewski.deser.value;
+package pl.kkurczewski.deser.value;
 
-import kkurczewski.deser.value.dto.ValueObject;
-import kkurczewski.deser.value.dto.Wrapper;
+import pl.kkurczewski.deser.value.dto.ValueObject;
+import pl.kkurczewski.deser.value.dto.Wrapper;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.reactive.WebFluxTest;
-import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.web.reactive.server.WebTestClient;
 
 import java.net.URI;

@@ -1,6 +1,7 @@
-package kkurczewski.deser.greet;
+package pl.kkurczewski.deser.user;
 
-import kkurczewski.deser.greet.dto.Greeting;
+import pl.kkurczewski.deser.user.dto.Address;
+import pl.kkurczewski.deser.user.dto.User;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.reactive.WebFluxTest;
@@ -8,45 +9,44 @@ import org.springframework.test.web.reactive.server.WebTestClient;
 
 import java.net.URI;
 
-@WebFluxTest(GreetingController.class)
-class GreetingControllerTest {
+@WebFluxTest(UserController.class)
+class UserControllerTest {
 
     @Autowired
     private WebTestClient webClient;
 
     @Test
     void shouldEchoRequest() {
-        Greeting greeting = new Greeting("Ahoj");
+        User user = new User("James", "Bond", new Address("REDACTED", "Great Britain"));
 
         webClient
                 .post()
-                .uri(URI.create("/greet"))
-                .bodyValue(greeting)
+                .uri(URI.create("/user"))
+                .bodyValue(user)
                 .exchange()
                 .expectStatus()
                 .is2xxSuccessful()
-                .expectBody(Greeting.class)
-                .isEqualTo(greeting)
+                .expectBody(User.class)
+                .isEqualTo(user)
                 .returnResult();
     }
 
     @Test
     void validateJsonFormat() {
-        Greeting greeting = new Greeting("Ahoj");
+        User user = new User("James", "Bond", new Address("REDACTED", "Great Britain"));
 
         webClient
                 .post()
-                .uri(URI.create("/greet"))
-                .bodyValue(greeting)
+                .uri(URI.create("/user"))
+                .bodyValue(user)
                 .exchange()
                 .expectStatus()
                 .is2xxSuccessful()
                 .expectBody()
-                .json(normalize("{'greeting':'Ahoj'}"));
+                .json(normalize("{'name':'James','surname':'Bond','street':'REDACTED','city':'Great Britain'}"));
     }
 
     private String normalize(String json) {
-        return json.replaceAll("'", "\"");
+        return json.replaceAll("'","\"");
     }
-
 }

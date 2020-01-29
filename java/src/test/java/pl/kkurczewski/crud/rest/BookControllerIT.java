@@ -1,19 +1,20 @@
 package kkurczewski.crud.rest;
 
+import kkurczewski.crud.BookRepository;
 import kkurczewski.crud.dto.Book;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.autoconfigure.web.reactive.WebFluxTest;
+import org.springframework.context.annotation.Import;
 import org.springframework.test.web.reactive.server.WebTestClient;
 
-import static org.springframework.boot.test.context.SpringBootTest.WebEnvironment.DEFINED_PORT;
-
-@SpringBootTest(webEnvironment = DEFINED_PORT)
+@WebFluxTest(BookController.class)
+@Import(BookRepository.class)
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
-class BookModuleTest {
+class BookControllerIT {
 
     @Autowired
     private WebTestClient webClient;
