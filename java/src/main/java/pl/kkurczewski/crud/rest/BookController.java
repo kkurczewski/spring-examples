@@ -1,7 +1,7 @@
-package kkurczewski.crud.rest;
+package pl.kkurczewski.crud.rest;
 
-import kkurczewski.crud.BookRepository;
-import kkurczewski.crud.dto.Book;
+import pl.kkurczewski.crud.BookRepository;
+import pl.kkurczewski.crud.dto.Book;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;

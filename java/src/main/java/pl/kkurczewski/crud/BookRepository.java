@@ -1,6 +1,6 @@
-package kkurczewski.crud;
+package pl.kkurczewski.crud;
 
-import kkurczewski.crud.dto.Book;
+import pl.kkurczewski.crud.dto.Book;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-package kkurczewski.crud.dto;
+package pl.kkurczewski.crud.dto;
 
 import java.util.Objects;
 

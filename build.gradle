@@ -5,7 +5,7 @@ plugins {
 }
 
 subprojects {
-    group "pl.kkurczewski"
+    group "pl.pl.kkurczewski"
     version "0.1.0"
 
     ext {
@@ -27,6 +27,13 @@ subprojects {
     dependencies {
         implementation "org.springframework.boot:spring-boot-starter-web"
         implementation "org.springframework.boot:spring-boot-starter-webflux"
+
+        // spring data
+        implementation "org.springframework.boot:spring-boot-starter-data-jpa"
+        testRuntimeOnly "com.h2database:h2"
+
+        // mariadb connector
+        implementation "org.mariadb.jdbc:mariadb-java-client:1.5.7"
 
         testImplementation("org.springframework.boot:spring-boot-starter-test") {
             exclude group: "org.junit.vintage", module: "junit-vintage-engine"

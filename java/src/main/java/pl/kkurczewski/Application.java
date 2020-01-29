@@ -1,4 +1,4 @@
-package kkurczewski;
+package pl.kkurczewski;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

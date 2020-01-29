@@ -1,7 +1,7 @@
-package kkurczewski.crud.rest;
+package pl.kkurczewski.crud.rest;
 
-import kkurczewski.crud.BookRepository;
-import kkurczewski.crud.dto.Book;
+import pl.kkurczewski.crud.BookRepository;
+import pl.kkurczewski.crud.dto.Book;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
