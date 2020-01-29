@@ -2,7 +2,7 @@ package pl.kkurczewski.util;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
-import pl.kkurczewski.crudgen.dto.Customer;
+import pl.kkurczewski.persistence.dto.Customer;
 
 @Repository
 public interface BrokenRepository extends CrudRepository<Customer, Long> {
