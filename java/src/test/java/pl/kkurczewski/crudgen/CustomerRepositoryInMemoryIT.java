@@ -25,7 +25,7 @@ import static org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTest
 @EnableJpaRepositories(basePackageClasses = CustomerRepository.class)
 @EntityScan(basePackageClasses = Customer.class)
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
-public abstract class CustomerRepositoryInMemoryIT {
+class CustomerRepositoryInMemoryIT {
 
     @Autowired
     private CustomerRepository customerRepository;
